@@ -1,0 +1,10 @@
+GET vs POST:
+- GET submits form data through the address bar while POST submits form fields through the body of the request
+
+Why SQLAlchelmy:
+- it is an ORM, which means that it allows us to abstract away all the SQL commands and tables into higher level syntax and construct (ie: classes, methods)
+
+SQLite vs MySQL and others:
+- use SQLite for small apps, especially in production
+- stored in a single file on disk
+- doesn't require a server to run (need to read up on this--how would we setup MySQL for this app?)
