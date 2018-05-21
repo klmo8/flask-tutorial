@@ -1,0 +1,95 @@
+2018-05-16 15:57:44,131 ERROR: Exception on /user/Kyle [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 89, in user
+    next_url = url_for('user', username, page=posts.next_num) if posts.has_next else None
+TypeError: url_for() takes 1 positional argument but 2 were given
+2018-05-16 15:58:03,966 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:38]
+2018-05-16 16:37:25,589 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:33:44,447 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:36:50,564 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:37:23,367 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:40:54,053 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:41:26,139 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 16:51:28,141 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:13:13,587 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:13:29,351 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:15:12,549 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:17:13,737 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:19:37,101 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:20:08,442 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:20:19,608 ERROR: Exception on /reset_password_request [POST] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 150, in reset_password_request
+    send_password_reset_email(user)
+NameError: name 'send_password_reset_email' is not defined
+2018-05-17 17:22:31,052 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:22:41,036 ERROR: Exception on /reset_password_request [POST] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 150, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/mail.py", line 11, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/models.py", line 56, in get_reset_password_token
+    return jwt.encode({'reset_password': self.id, 'exp': time()+expires_in}, app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+NameError: name 'time' is not defined
+2018-05-17 17:23:32,866 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]
+2018-05-17 17:23:51,622 ERROR: Exception on /reset_password_request [POST] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 150, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/mail.py", line 11, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/models.py", line 57, in get_reset_password_token
+    return jwt.encode({'reset_password': self.id, 'exp': time()+expires_in}, app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+NameError: name 'app' is not defined
+2018-05-17 17:24:13,599 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:40]

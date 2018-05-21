@@ -1,0 +1,108 @@
+2018-05-19 13:03:18,306 ERROR: Exception on /index [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 33, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 23, in template
+    {% block navbar %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 23, in template
+    {% block navbar %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'navbar' defined twice
+2018-05-19 13:03:20,494 ERROR: Exception on /index [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 33, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 23, in template
+    {% block navbar %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 23, in template
+    {% block navbar %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'navbar' defined twice
+2018-05-19 13:03:36,373 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:42]
+2018-05-19 13:08:17,053 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:42]

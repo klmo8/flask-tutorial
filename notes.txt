@@ -8,3 +8,94 @@ SQLite vs MySQL and others:
 - use SQLite for small apps, especially in production
 - stored in a single file on disk
 - doesn't require a server to run (need to read up on this--how would we setup MySQL for this app?)
+
+DB indexing:
+- doing this allows for sorting table results at a later time
+
+Decocrators:
+- modify the functions that follow it
+- commonly used to register functions as callbacks for certain events
+- ex: with @app.route('/') we say that the function below should be triggered whenever that route is accessed
+
+Dynamic URLs:
+- routes with <...> in their path will send the dynamic part as a call to the function that handles the route
+
+'Include' statement in templates:
+- use this to insert reusable blocks of template code across several templates
+
+Custom validation:
+- FlaskWTF takes care of this automatically, but if you want to customize then this is done through the method naming pattern "validate_username", "validate_email", etc.
+
+DB Relationships:
+- REMINDER: in one-to-many relationships, the foreign key goes on the "many" side
+- a many-to-many relationship is like two one-to-many relationships overlapping from both sides
+-- many-to-many relationships cannot depend on foreign keys and instead need an intermediate table to map their relationship
+--- the intermediate/association table holds the foreign keys of the entities in the many-to-many relationship
+
+Testing:
+- use the Python unittest library to easily create and execute tests.. just run the tests.py file and it runs all of the included tests
+- unit tests should be added for each functionality; this will usually(?) be in the form of methods in the models.py class (since we want to limit the use of logic being added to the view)
+
+Redirect vs render_template:
+- it is std practice to use redirect when a POST request is submitted
+-- mitigates form being resubmitted and flagging a confusing "duplicate submission" error to the user
+--- basically prevents the LAST request from being a POST request, which means the page is refreshed as a GET and won't include any leftover POST data
+
+SQLALchemy:
+- returns query objects (which is basically just the SQL for the given query)
+-- you need to actually do something with the object to get it to display (ie: filter it, or get all() or first())
+
+Config.py
+- all config variables are accessed by app.config['variable_name']
+- this is a good place to have system-wide settings, like how many posts should be displayed per page
+-- provides a central place to change configuration settings, and separates the configuration from the implementation
+--- this makes our app easier to modify and provides more logical structuring
+
+Pagination:
+- this is built into SQLAlchemy, allowing you to paginate the query lists that are returned
+
+Flask extensions/packages:
+- generally require that you create an instance of them right after the app is created in __init__.py
+- there is a Bootstrap Flask module that makes it v easy to apply bootstrap to templates, to render forms, etc.
+-- the key to applying bootstrap is just to use their documentation for the feature you want and then adapt it for your needs
+- may want to look into Flask-User module that apparently takes care of all the registrations, username/password reset etc for next app
+- look into flask-moment and Moment.js to handle apps where users are in multiple timezones (provides options for converting/formatting dates)
+
+Timezone stuff:
+- if developing apps that will be developed for users in different timezønes, will need some way of recording dates specific to the current user (see relevant chapter of Mega Tutorial)
+- basically you will store timestamps in UTC on the backend and then convert them to timezone of user (which can be found through the browser--JS!)
+
+Static Methods:
+- just a way to ensure that a method cannot modify the object or class in any way
+
+Threading/Asynchronous Methods:
+- anytime you have some task (like a function call) that is slow, you can use the threading or multiprocessing modules to run that task in the backgroun
+
+Before Request:
+- a convenient way to insert some logic to run (ie: update timestamp of current user's last_seen attribute) before every server request
+
+Server-side vs Client-side:
+- for the best explanation I've come across: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-ajax
+- AJAX is just Asynchronous Javascript--the client requests and the server responds, and there is no need for page refresh to display the new data
+-- ie: translate selected posts on a blog webpage
+--- AJAX requests return JSON instead of HTML or a redirect
+
+Static files:
+- access these using the url_for('static') with args = to the name of the specific filename
+
+Security:
+- to avoid hardcoded keys, passwords, etc. set them as environment variables then import them in the config file via the os.environ.get('VAR_NAME')
+
+App structure/organization:
+- a convenient way to make your app more portable (especially useful for larger applications) is Flask's built-in blueprints
+-- allows you to break the app into logical components (erros, authorization, posts, etc) and then register that componet as part of the app
+--- the basic idea is that you move all related functionality to an aptly titled subdir of the app folder (for functionality) and a subdir of templates (for visual)
+
+Environment variables:
+- instead of constantly resetting environment variables everytime the venv is reinstaed, you can save them all in a .env file that is loaded with the application
+
+General:
+- application logic should be contained in other classes/modules (ie: models.py) instead of views whenever possible to facilitate unit testing
+- *write each part of the application without assumptions about how other parts work to keep the app modular*
+- a handy way to see all attr of an object is to use the dir method with the obj as a parameter
+- Python can handle JSON by converting it to a string via a simple function

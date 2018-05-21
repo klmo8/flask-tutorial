@@ -1,0 +1,107 @@
+2018-05-16 15:54:13,378 ERROR: Exception on /user/Kyle [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 91, in user
+    return render_template('user.html', posts=posts, user=user, next_url=next_url, prev_url=prev_url)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block app_content %}{% endblock %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/user.html", line 21, in block "app_content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2018-05-16 15:54:56,053 ERROR: Exception on /user/Kyle [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 91, in user
+    return render_template('user.html', posts=posts.items, user=user, next_url=next_url, prev_url=prev_url)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block app_content %}{% endblock %}
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/templates/user.html", line 21, in block "app_content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2018-05-16 15:55:01,868 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:38]
+2018-05-16 15:55:51,243 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:38]
+2018-05-16 15:56:49,761 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:38]
+2018-05-16 15:56:51,739 ERROR: Exception on /user/Kyle [GET] [in /Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py:1753]
+Traceback (most recent call last):
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/app/routes.py", line 89, in user
+    next_url = url_for('user', page=posts.next_num) if posts.has_next else None
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 341, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2053, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 330, in url_for
+    force_external=external)
+  File "/Users/KLM/Desktop/Programming/Webdev/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
+2018-05-16 15:57:41,837 INFO: Microblog startup [in /Users/KLM/Desktop/Programming/Webdev/microblog/app/__init__.py:38]
